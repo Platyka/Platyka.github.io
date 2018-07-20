@@ -9,102 +9,113 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="container">
-  <header class="header">
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-      </ul>
-      <div class="nav__btn"></div>
-    </nav>
-    <h1 class="header__main-text">Front-end Web Developer.</h1>
-    <h3 class="header__sub-text">Building web applications for the future</h3>
-    <!-- <img src="img/angle-down-solid.svg" alt="arrow down" class="header__icon"> -->
-    <svg class="header__icon">
-      <use xlink:href="img/sprite.svg#icon-chevron-down"></use>
-    </svg>
-  </header>
-
-  <section class="section-about line">
-    <h2 class="heading-2">About me</h2>
-    <div class="about">
-      <figure>
-        <img src="img/icon.jpg" alt="Image" class="about__img">
-      </figure>
-      <div class="about__text">
-        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure adipisci possimus reprehenderit, dolores aspernatur, ipsum maiores excepturi, fugit iste placeat nam quia repudiandae sunt perspiciatis expedita suscipit neque? Corrupti, possimus.</p>
-        <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil magnam, excepturi in eligendi sed, sit eius consectetur sequi similique ducimus doloribus voluptas deleniti iusto neque tenetur quam sunt reiciendis quo.</p>
-      </div>
-      <div class="about__skills">
-        <i class="fab fa-html5 about__icon"></i>
-        <i class="fab fa-css3-alt about__icon"></i>
-        <i class="fab fa-sass about__icon"></i>
-        <i class="fab fa-js about__icon"></i>
-        <i class="fab fa-npm about__icon"></i>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-projects">
-    <h2 class="heading-2">Projects</h2>
-    <div class="projects">
-      <div class="project">
-        <img src="img/project.jpg" alt="Project 1" class="project__img">
-        <h4 class="project__title heading-4">Project 1</h4>
-        <p class="project__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi tempora numquam dignissimos. Inventore asperiores saepe cumque quisquam totam.</p>
-        <a href="#" class="project__btn btn-l">Visit page</a>
-      </div>
-
-      <div class="project">
-        <img src="img/project.jpg" alt="Project 2" class="project__img">
-        <h4 class="project__title heading-4">Project 2</h4>
-        <p class="project__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi tempora numquam dignissimos. Inventore asperiores saepe cumque quisquam totam.</p>
-        <a href="#" class="project__btn btn-l">Visit page</a>
-      </div>
-
-      <div class="project">
-        <img src="img/project.jpg" alt="Project 3" class="project__img">
-        <h4 class="project__title heading-4">Project 3</h4>
-        <p class="project__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi tempora numquam dignissimos. Inventore asperiores saepe cumque quisquam totam.</p>
-        <a href="#" class="project__btn btn-l">Visit page</a>
-      </div>
-
-      <div class="project">
-        <img src="img/project.jpg" alt="Project 4" class="project__img">
-        <h4 class="project__title heading-4">Project 4</h4>
-        <p class="project__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi tempora numquam dignissimos. Inventore asperiores saepe cumque quisquam totam.</p>
-        <a href="#" class="project__btn btn-l">Visit page</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-contact">
-    <div class="contact">
-      <h2 class="contact__main-text">Want to work together?</h2>
-      <h3 class="contact__sub-text">Contact me below</h3>
-      <button class="contact__btn btn-b">Get started!</button>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <nav class="nav">
-      <ul class="nav__list-1">
-        <li class="nav__item"><a href="#" class="nav__link nav__link--1">Home</a></li>
-        <li class="nav__item"><a href="#" class="nav__link nav__link--1">About</a></li>
-        <li class="nav__item"><a href="#" class="nav__link nav__link--1">Projects</a></li>
-        <li class="nav__item"><a href="#" class="nav__link nav__link--1">Contact</a></li>
-      </ul>
-
-      <ul class="nav__list-2">
-        <li class="nav__item"><a href="#" class="nav__link"><i class="fab fa-github nav__icon"></i></a></li>
-        <li class="nav__item"><a href="#" class="nav__link"><i class="fab fa-linkedin-in nav__icon"></i></a></li>
-        <li class="nav__item"><a href="#" class="nav__link"><i class="fab fa-facebook-f nav__icon"></i></a></li>
-        <li class="nav__item"><a href="#" class="nav__link"><i class="fab fa-twitter nav__icon"></i></a></li>
+<body>
+    <nav class="nav-mobile">
+      <div class="nav-mobile__close"><i class="fas fa-times nav-mobile__icon"></i></div>
+      <ul class="nav-mobile__list">
+        <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">About</a></li>
+        <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">Projects</a></li>
+        <li class="nav-mobile__item"><a href="#" class="nav-mobile__link">Contact</a></li>
       </ul>
     </nav>
-    <p class="copyright">&copy; Atti, 2018</p>
-  </footer>
+  <div class="container">
+    <header class="header">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+        </ul>
+        <div class="nav__btn"></div>
+      </nav>
+      <h1 class="header__main-text">Front-end Web Developer.</h1>
+      <h3 class="header__sub-text">Building web applications for the future</h3>
+      <!-- <img src="img/angle-down-solid.svg" alt="arrow down" class="header__icon"> -->
+      <svg class="header__icon">
+        <use xlink:href="img/sprite.svg#icon-chevron-down"></use>
+      </svg>
+    </header>
+
+    <section class="section-about line">
+      <h2 class="heading-2">About me</h2>
+      <div class="about">
+        <figure>
+          <img src="img/icon.jpg" alt="Image" class="about__img">
+        </figure>
+        <div class="about__text">
+          <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure adipisci possimus reprehenderit, dolores aspernatur, ipsum maiores excepturi, fugit iste placeat nam quia repudiandae sunt perspiciatis expedita suscipit neque? Corrupti, possimus.</p>
+          <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil magnam, excepturi in eligendi sed, sit eius consectetur sequi similique ducimus doloribus voluptas deleniti iusto neque tenetur quam sunt reiciendis quo.</p>
+        </div>
+        <div class="about__skills">
+          <i class="fab fa-html5 about__icon"></i>
+          <i class="fab fa-css3-alt about__icon"></i>
+          <i class="fab fa-sass about__icon"></i>
+          <i class="fab fa-js about__icon"></i>
+          <i class="fab fa-npm about__icon"></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-projects">
+      <h2 class="heading-2">Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <img src="img/project.jpg" alt="Project 1" class="project__img">
+          <h4 class="project__title heading-4">Project 1</h4>
+          <p class="project__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi tempora numquam dignissimos. Inventore asperiores saepe cumque quisquam totam.</p>
+          <a href="#" class="project__btn btn-l">Visit page</a>
+        </div>
+
+        <div class="project">
+          <img src="img/project.jpg" alt="Project 2" class="project__img">
+          <h4 class="project__title heading-4">Project 2</h4>
+          <p class="project__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi tempora numquam dignissimos. Inventore asperiores saepe cumque quisquam totam.</p>
+          <a href="#" class="project__btn btn-l">Visit page</a>
+        </div>
+
+        <div class="project">
+          <img src="img/project.jpg" alt="Project 3" class="project__img">
+          <h4 class="project__title heading-4">Project 3</h4>
+          <p class="project__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi tempora numquam dignissimos. Inventore asperiores saepe cumque quisquam totam.</p>
+          <a href="#" class="project__btn btn-l">Visit page</a>
+        </div>
+
+        <div class="project">
+          <img src="img/project.jpg" alt="Project 4" class="project__img">
+          <h4 class="project__title heading-4">Project 4</h4>
+          <p class="project__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi tempora numquam dignissimos. Inventore asperiores saepe cumque quisquam totam.</p>
+          <a href="#" class="project__btn btn-l">Visit page</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-contact">
+      <div class="contact">
+        <h2 class="contact__main-text">Want to work together?</h2>
+        <h3 class="contact__sub-text">Contact me below</h3>
+        <button class="contact__btn btn-b">Get started!</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <nav class="nav">
+        <ul class="nav__list-1">
+          <li class="nav__item"><a href="#" class="nav__link nav__link--1">Home</a></li>
+          <li class="nav__item"><a href="#" class="nav__link nav__link--1">About</a></li>
+          <li class="nav__item"><a href="#" class="nav__link nav__link--1">Projects</a></li>
+          <li class="nav__item"><a href="#" class="nav__link nav__link--1">Contact</a></li>
+        </ul>
+
+        <ul class="nav__list-2">
+          <li class="nav__item"><a href="#" class="nav__link"><i class="fab fa-github nav__icon"></i></a></li>
+          <li class="nav__item"><a href="#" class="nav__link"><i class="fab fa-linkedin-in nav__icon"></i></a></li>
+          <li class="nav__item"><a href="#" class="nav__link"><i class="fab fa-facebook-f nav__icon"></i></a></li>
+          <li class="nav__item"><a href="#" class="nav__link"><i class="fab fa-twitter nav__icon"></i></a></li>
+        </ul>
+      </nav>
+      <p class="copyright">&copy; Atti, 2018</p>
+    </footer>
+  </div>  
+  <script src="app.js"></script>
 </body>
 </html>
