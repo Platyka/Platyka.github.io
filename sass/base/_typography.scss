@@ -1,0 +1,33 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-grey-dark-3);
+}
+
+.heading-2 {
+  font-size: 2.5rem;
+  margin: 12rem 0 6rem 0;
+
+  @include respond(medium) {
+    text-align: center; 
+    margin: 8rem 0 4rem 0;
+  }
+
+  @include respond(small) {
+    margin: 6rem 0 2rem 0;
+  }
+}
+
+.heading-4 {
+  font-size: 1.8rem;
+
+  @include respond(small) {
+    font-size: 1.6rem;
+  }
+}
+
+
+.paragraph {
+  font-size: 1.6rem;
+}

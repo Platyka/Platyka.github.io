@@ -1,0 +1,430 @@
+/////////////////////////////
+// HEDER
+
+.header {
+  background-image: linear-gradient(to right, rgba($color-primary-light, .8), rgba($color-primary-dark, .8)), url(../img/image1.jpg);
+  background-size: cover;
+  grid-column: full-start / full-end;
+
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: [f-start] minmax(6rem, 1fr) [c-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [c-end] minmax(6rem, 1fr) [f-end];
+  // grid-template-columns: repeat(8, minmax(max-content, 1fr));
+
+
+  // NAVIGATION
+  .nav {
+    padding: 3rem;
+    padding-right: 0;
+    grid-column: c-start / c-end;
+    display: flex;
+    justify-content: flex-end;
+
+    @include respond(small) {
+      grid-column: f-start / f-end;
+      padding-right: 3rem;
+    }
+
+    &__list {
+      list-style: none;
+      text-transform: uppercase;
+      font-size: 2rem;
+      
+
+      display: flex;
+      justify-content: flex-end;
+
+      @include respond(small) {
+        display: none;
+      }
+    }
+
+    &__item:not(:last-of-type) {
+      margin-right: 2rem;
+    }
+
+    &__link:link,
+    &__link:visited {
+      text-decoration: none;
+      color: #fff;
+      position: relative;
+      padding-bottom: .5rem;
+    }
+
+    &__link::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      width: 0;
+      right: 0;
+      height: 2px;
+      transition: width .4s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
+      background-color: currentColor;
+    }
+
+    &__link:hover::after {
+      width: 100%;
+      left: 0;
+    }
+
+    &__btn {
+      align-self: center;
+      width: 3rem;
+      height: 3px;
+      background-color: #fff;
+      display: none;
+
+      @include respond(small) {
+        display: block;
+      }
+
+      &::after,
+      &::before {
+        content: "";
+        display: block;
+        width: 3rem;
+        height: 3px;
+        background-color: #fff;
+      }
+
+      &::after {
+        transform: translateY(6px);
+      }
+
+      &::before {
+        transform: translateY(-9px);
+      }
+    }
+  }
+
+
+  // TITLE
+  &__main-text { 
+    color: #fff;
+    font-size: 4.5rem;
+    font-weight: 400;
+    grid-column: c-start / c-end;
+    align-self: end;
+    line-height: 1;
+
+    @include respond(small) {
+      font-size: 2.5rem;
+      justify-self: start;
+    }
+  }
+
+  &__sub-text {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    grid-column: c-start / c-end;
+    line-height: 1;
+    padding-top: 2rem;
+
+    @include respond(small) {
+      padding-top: 1.3rem;
+      font-size: 1.3rem;
+      justify-self: start;
+    }
+  }
+
+  &__icon {
+    width: 7rem;
+    height: 7rem;
+    fill: #fff;
+    grid-column: f-start / f-end;
+    align-self: end;
+    justify-self: center;
+
+    animation: pulsate 1s infinite;
+    cursor: pointer;
+  }
+}
+
+//////////////////////////////////////////////
+// SECTION ABOUT
+
+.section-about {
+  // background-color: yellowgreen;
+  grid-column: center-start / center-end;
+
+  .about {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 3rem;
+    align-items: center;
+
+    figure {
+      @include respond(medium) {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        justify-self: center;
+      }
+    }
+
+    &__img {
+      object-fit: cover;
+      border-radius: 50%;
+      width: 15rem;
+
+      @include respond(medium) {
+        width: 12rem;
+      }
+
+      @include respond(small) {
+        width: 10rem;
+      }
+    }
+
+    &__text {
+      @include respond(medium) {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+      }
+
+      @include respond(small) {
+        padding: 0 1.3rem;
+        font-size: 1.4rem;
+      }
+    }
+
+    &__skills {
+      grid-column: 1 / -1;
+      padding: 2rem 0 4rem 0;
+
+      display: flex;
+      justify-content: space-around;
+
+      @include respond(medium) {
+        padding: 1rem 0 3rem 0;
+      }
+
+      @include respond(small) {
+        padding: 0 0 2rem 0;
+      }
+    }
+
+    &__icon {
+      font-size: 6rem;
+      color: var(--color-primary);
+
+      @include respond(medium) {
+        font-size: 5rem;
+      }
+
+      @include respond(small) {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+///////////////////////////
+// SECTION PROJECTS
+
+.section-projects {
+  // background-color: yellow;
+  grid-column: center-start / center-end;
+
+  // @include respond(small) {
+  //   grid-column: full-start / full-end;
+  // }
+  // padding: 2rem;
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); 
+    grid-gap: 4rem;
+  
+    .project {
+      display: grid;
+      grid-gap: 2rem;
+
+      background-color: var(--color-grey-light-2);
+      transition: all .4s;
+
+      &__img {
+        width: 100%;
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+      }
+
+      &__title {
+        background-image: linear-gradient(rgba($color-primary, .9), rgba($color-primary, .9));
+        padding: 1rem;
+        color: #fff;
+        text-align: center;
+
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        align-self: end;
+      }
+
+      &__text {
+        font-size: 1.6rem;
+        text-align: center;
+        padding: 0 .8rem;
+
+        @include respond(small) {
+          font-size: 1.4rem;
+        }
+      }
+
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+      }
+    }
+  }
+
+  
+}
+
+/////////////////////////////
+// SECTION CONTACT
+.section-contact {
+  background-color: var(--color-primary);
+  margin-top: 12rem;
+ 
+  @include respond(medium) {
+    margin-top: 8rem; 
+  }
+ 
+  @include respond(small) {
+    margin-top: 6rem;
+  }
+
+  grid-column: full-start / full-end;
+  padding: 6rem 0 ;
+
+  .contact {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+    &__main-text {
+      color: #fff;
+      font-size: 3rem;
+
+      @include respond(small) {
+        font-size: 2rem;
+      }
+    }
+
+    &__sub-text {
+      color: #fff;
+      font-size: 2rem;
+      font-weight: 400;
+      justify-self: center;
+
+      @include respond(small) {
+        font-size: 1.7rem;
+      }
+    }
+
+    &__btn {
+      margin-top: 3.5rem;
+      justify-self: center;
+    }
+  }
+}
+
+
+/////////////////////////////
+// FOOTER
+.footer {
+  background-color: var(--color-grey-dark-3);
+  grid-column: full-start / full-end;
+
+  display: grid;
+  grid-template-columns: [f-start] minmax(6rem, 1fr) [c-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [c-end] minmax(6rem, 1fr) [f-end];
+  grid-row-gap: 2rem;
+
+  padding: 6rem;
+
+  .nav {
+    grid-column: c-start / c-end;
+
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+
+
+    @include respond(medium) {
+      grid-column: f-start / f-end;
+    }
+
+    @include respond(small) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    &__list-1 {
+      text-transform: uppercase;
+
+      @include respond(small) {
+        margin-top: 3rem;
+      }
+    }
+
+    &__list-1,
+    &__list-2 {
+      display: flex;
+      list-style: none;
+      align-items: center;
+    }
+  
+    &__item:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    &__link:link,
+    &__link:visited {
+      text-decoration: none;
+      color: #fff;
+      transition: all .2s;
+    }  
+
+    &__link--1 {
+      position: relative;
+    }
+
+    &__link--1::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      width: 0;
+      right: 0;
+      height: 2px;
+      transition: width .4s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
+      background-color: currentColor;
+    }
+
+    &__link--1:hover::after {
+      width: 100%;
+      left: 0;
+    }
+
+    &__icon {
+      font-size: 2rem;
+      transition: all .3s;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+
+  .copyright {
+    grid-column: c-start / c-end;
+
+    color: #fff;
+    font-size: 1.2rem;
+    justify-self: center;
+
+    @include respond(small) {
+      margin-top: 4rem;
+    }
+  }
+}
