@@ -1,6 +1,6 @@
 .nav-mobile {
   
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-color: var(--color-primary);
   position: absolute;
@@ -22,7 +22,7 @@
 
   &__list {
     list-style: none;
-    height: 100%;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
