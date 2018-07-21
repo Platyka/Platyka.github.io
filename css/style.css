@@ -122,25 +122,25 @@ body {
     outline: none; }
 
 .nav-mobile {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: var(--color-primary);
   position: absolute;
   display: block;
   transition: all .4s;
   z-index: 100;
-  top: -1000px;
+  top: -130rem;
   left: 0; }
   .nav-mobile__close {
     position: absolute;
     top: 1%;
-    right: 5%;
+    right: 10%;
     color: #fff;
     font-size: 4rem;
     cursor: pointer; }
   .nav-mobile__list {
     list-style: none;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -159,7 +159,6 @@ body {
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   @media only screen and (max-width: 37.5em) {
     .container {
-      grid-template-rows: 70%;
       grid-template-columns: [full-start center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end full-end]; } }
 
 .header {
