@@ -7,7 +7,7 @@
   display: block;
   transition: all .4s;
   z-index: 100;
-  top: -100%;
+  top: -120%;
   left: 0;
   // transform: translateY(-100%);
 
@@ -17,6 +17,7 @@
     right: 5%;
     color: #fff;
     font-size: 4rem;
+    cursor: pointer;
   }
 
   &__list {

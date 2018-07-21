@@ -129,14 +129,15 @@ body {
   display: block;
   transition: all .4s;
   z-index: 100;
-  top: -100%;
+  top: -120%;
   left: 0; }
   .nav-mobile__close {
     position: absolute;
     top: 1%;
     right: 5%;
     color: #fff;
-    font-size: 4rem; }
+    font-size: 4rem;
+    cursor: pointer; }
   .nav-mobile__list {
     list-style: none;
     height: 100vh;
@@ -158,6 +159,7 @@ body {
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   @media only screen and (max-width: 37.5em) {
     .container {
+      grid-template-rows: 90vh;
       grid-template-columns: [full-start center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end full-end]; } }
 
 .header {
@@ -210,7 +212,8 @@ body {
       width: 3rem;
       height: 3px;
       background-color: #fff;
-      display: none; }
+      display: none;
+      cursor: pointer; }
       @media only screen and (max-width: 37.5em) {
         .header .nav__btn {
           display: block; } }
