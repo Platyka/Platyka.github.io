@@ -4,7 +4,7 @@
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
   @include respond(small) {
-    grid-template-rows: 90vh;
+    grid-template-rows: 70%;
     grid-template-columns: [full-start center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end full-end];
   }
 }
