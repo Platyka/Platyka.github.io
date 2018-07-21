@@ -20,5 +20,6 @@ body {
   ::selection {
     background-color: var(--color-primary-light);
     color: #fff;
+    position: relative;
   }
 }

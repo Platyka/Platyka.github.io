@@ -16,6 +16,12 @@
   100% {
     transform: scale(1); } }
 
+@keyframes zoom {
+  from {
+    transform: scale(0.5); }
+  to {
+    transform: scale(1); } }
+
 *,
 *::after,
 *::before {
@@ -32,7 +38,8 @@ html {
 
 body ::selection {
   background-color: var(--color-primary-light);
-  color: #fff; }
+  color: #fff;
+  position: relative; }
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -74,6 +81,13 @@ body {
 
 .open {
   top: 0 !important; }
+
+.blur {
+  filter: blur(1rem); }
+
+.open-modal {
+  display: block !important;
+  animation: zoom .2s; }
 
 .btn-l:visited,
 .btn-l:link {
@@ -152,6 +166,68 @@ body {
     font-size: 2rem;
     text-decoration: none;
     text-transform: uppercase; }
+
+.contact-cta {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 50;
+  display: none;
+  transition: transform .4s; }
+  .contact-cta__close {
+    position: absolute;
+    top: 1%;
+    right: 10%;
+    color: #fff;
+    font-size: 4rem;
+    cursor: pointer;
+    transition: all .3s;
+    z-index: 100; }
+    .contact-cta__close:hover {
+      transform: scale(1.3); }
+  .contact-cta__form {
+    max-width: 60rem;
+    margin: 0 auto; }
+    @media only screen and (max-width: 37.5em) {
+      .contact-cta__form {
+        margin: 0 1rem; } }
+  .contact-cta__title {
+    color: #fff;
+    margin-top: 3rem;
+    text-align: center; }
+  .contact-cta .form {
+    display: grid;
+    grid-row-gap: 2rem; }
+    .contact-cta .form__group {
+      display: grid;
+      grid-row-gap: .5rem; }
+    .contact-cta .form__label {
+      color: #fff;
+      font-size: 1.7rem; }
+    .contact-cta .form__input {
+      padding: .8rem;
+      font-family: inherit;
+      border: none;
+      border-bottom: 3px solid transparent;
+      transition: all .2s; }
+      .contact-cta .form__input:focus {
+        outline: none;
+        border-bottom: 3px solid var(--color-primary); }
+    .contact-cta .form__textarea {
+      border: none;
+      border-bottom: 3px solid transparent;
+      padding: .8rem;
+      transition: all .2s; }
+      .contact-cta .form__textarea:focus {
+        outline: none;
+        border-bottom: 3px solid var(--color-primary); }
+    .contact-cta .form__btn {
+      width: 20rem;
+      margin: 0 auto;
+      margin-top: 3rem; }
 
 .container {
   display: grid;
