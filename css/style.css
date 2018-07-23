@@ -176,7 +176,8 @@ body {
   width: 100%;
   z-index: 50;
   display: none;
-  transition: transform .4s; }
+  overflow: auto;
+  padding-bottom: 3rem; }
   .contact-cta__close {
     position: absolute;
     top: 1%;
